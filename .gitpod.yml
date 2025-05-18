@@ -1,2 +1,7 @@
 image:
   file: .gitpod.DockerFile
+
+tasks:
+  - name: Setup
+    init: |
+      echo "Workspace Ubuntu 24.04 siap digunakan! 🚀"
