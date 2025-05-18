@@ -1,5 +1,5 @@
 # Use the official Ubuntu 24.04 LTS image
-FROM ubuntu:24.04
+FROM ubuntu:24.10
 
 # Update packages and install basic tools
 RUN apt-get update && \
@@ -16,7 +16,7 @@ RUN apt-get update && \
     && rm -rf /var/lib/apt/lists/*
 
 # (Optional) Add future 24.10 repositories (use with caution)
-RUN echo "deb http://archive.ubuntu.com/ubuntu/ oracular main restricted" >> /etc/apt/sources.list
+# RUN echo "deb http://archive.ubuntu.com/ubuntu/ oracular main restricted" >> /etc/apt/sources.list
 
 # Install your application dependencies
 # Example: Install Node.js
@@ -30,5 +30,4 @@ ENV NODE_ENV=production
 COPY . /app
 WORKDIR /app
 
-# Run your application
-CMD ["node", "index.js"]
+
