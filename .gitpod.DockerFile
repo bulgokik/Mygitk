@@ -2,9 +2,9 @@
 FROM ubuntu:24.10
 
 # Update packages and install basic tools
-RUN apt-get update && \
-    apt-get upgrade -y && \
-    apt-get install -y \
+RUN sudo apt-get update && \
+    sudo apt-get upgrade -y && \
+    sudo apt-get install -y \
         curl \
         wget \
         git \
@@ -13,7 +13,7 @@ RUN apt-get update && \
         flex \
         bison \
         software-properties-common \
-    && rm -rf /var/lib/apt/lists/*
+    && sudo rm -rf /var/lib/apt/lists/*
 
 # (Optional) Add future 24.10 repositories (use with caution)
 # RUN echo "deb http://archive.ubuntu.com/ubuntu/ oracular main restricted" >> /etc/apt/sources.list
@@ -21,7 +21,7 @@ RUN apt-get update && \
 # Install your application dependencies
 # Example: Install Node.js
 RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - && \
-    apt-get install -y nodejs
+   sudo apt-get install -y nodejs
 
 # Set environment variables
 ENV NODE_ENV=production
