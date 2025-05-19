@@ -1,5 +1,5 @@
 # Use Ubuntu 24.04 as the base image
-FROM ubuntu:24.10
+FROM ubuntu:24.04.2 LTS
 
 # Install Gitpod's core dependencies (required for workspace functionality)
 RUN apt-get update && \
@@ -35,5 +35,5 @@ ENV LANGUAGE=en_US:en
 ENV LC_ALL=en_US.UTF-8
 
 # Optional: Install additional tools (e.g., Node.js, Python, etc.)
-# RUN curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash - && \
-#     sudo apt-get install -y nodejs
+ RUN curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash - && \
+   sudo apt-get install -y nodejs
