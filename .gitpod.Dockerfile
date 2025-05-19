@@ -12,6 +12,12 @@ RUN apt-get update && \
     bc \
     flex \
     bison \
+    clang \
+    llvm \
+   binutils \
+   build-essential \
+    nano \
+    make \
     ca-certificates \
     locales \
     openssh-server \
