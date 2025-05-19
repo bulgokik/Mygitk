@@ -1,5 +1,5 @@
 # Use Ubuntu 24.04 as the base image
-FROM ubuntu:24.04.2 LTS
+FROM ubuntu:24.04
 
 # Install Gitpod's core dependencies (required for workspace functionality)
 RUN apt-get update && \
